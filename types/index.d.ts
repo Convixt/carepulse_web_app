@@ -1,4 +1,6 @@
 /* eslint-disable no-unused-vars */
+"use client";
+
 
 declare type SearchParamProps = {
     params: { [key: string]: string };

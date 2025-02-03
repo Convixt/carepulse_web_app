@@ -1,3 +1,5 @@
+"use-client";
+
 import Image from "next/image";
 
 import { AppointmentForm } from "@/components/forms/AppointmentForm";
