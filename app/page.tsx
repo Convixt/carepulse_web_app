@@ -1,6 +1,7 @@
- "use client";
+"use client";
 
- import Image from "next/image";
+import React, { Suspense } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
@@ -13,7 +14,10 @@ const Home = () => {
 
   return (
     <div className="flex h-screen max-h-screen">
-      {isAdmin && <PasskeyModal />}
+      {/* Wrap the conditional rendering of PasskeyModal in Suspense */}
+      <Suspense fallback={<div>Loading...</div>}>
+        {isAdmin && <PasskeyModal />}
+      </Suspense>
 
       <section className="remove-scrollbar container my-auto">
         <div className="sub-container max-w-[496px]">
